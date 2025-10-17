@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h3>ADRAIN Translator</h3>
+
+  <label>
+    <input type="checkbox" id="enableToggle" />
+    Enable Translation
+  </label>
+  <span id="statusLabel">Off</span>
+
+  <div class="lang-select">
+    <label for="langSelect">Translate to:</label>
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+      <option value="de">German</option>
+      <option value="ja">Japanese</option>
+      <option value="zh">Chinese</option>
+    </select>
+  </div>
+
+  <div class="element-select">
+    <p>Select element types to translate:</p>
+    <label><input type="checkbox" class="elementType" value="p" /> Paragraphs (p)</label>
+    <label><input type="checkbox" class="elementType" value="h1" /> H1</label>
+    <label><input type="checkbox" class="elementType" value="h2" /> H2</label>
+    <label><input type="checkbox" class="elementType" value="h3" /> H3</label>
+    <label><input type="checkbox" class="elementType" value="div[class*='text-']" /> Tailwind Text Divs</label>
+  </div>
+
+  <label><input type="checkbox" id="previewMode" /> Preview Mode (highlight before translating)</label>
+
+  <div class="color-picker">
+    <label for="textColor">Translated Text Color:</label>
+    <input type="color" id="textColor" value="#0000FF" />
+  </div>
+
+  <button id="applyBtn">Apply</button>
+  <script src="popup.js"></script>
+</body>
+</html>
